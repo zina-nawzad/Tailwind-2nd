@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Task</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <div class="navbar bg-primary-color">
+      <div
+        class="flex flex-row justify-between items-center w-full py-3 lg:mx-44 md:mx-28 mx-9"
+      >
+        <div class="navar-start flex justify-start">
+          <img src="Images/logo.png" class="cursor-pointer" />
+        </div>
+        <div
+          class="navbar-end hidden lg:flex flex-row justify-center items-center gap-x-6 text-white font-medium"
+        >
+          <h3 class="text-cyan-500 nav-item font-medium cursor-pointer">
+            Home
+          </h3>
+          <h3
+            class="nav-item relative cursor-pointer font-medium after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            Services
+          </h3>
+          <h3
+            class="nav-item relative cursor-pointer font-medium after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            Portfolio
+          </h3>
+          <h3
+            class="nav-item relative cursor-pointer font-medium after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            About
+          </h3>
+          <h3
+            class="nav-item relative cursor-pointer font-medium after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            Contact
+          </h3>
+          <i
+            class="fa-solid fa-magnifying-glass text-cyan-500 cursor-pointer items-center text-base border border-l-4 border-t-0 border-r-0 border-b-0 pl-4 border-blue-color py-1"
+          ></i>
+          <button
+            class="bg-cyan-500 text-white rounded-full py-2 px-4 hover:bg-white hover:text-cyan-500 hover:duration-100"
+          >
+            login
+          </button>
+        </div>
+
+        <div class="flex flex-row dropdown lg:hidden navbar-end">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-circle text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w- cursor-pointer"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm lg:hidden dropdown-content rounded-box z-[1] mt-[70px] shadow bg-white text-cyan-500"
+          >
+            <li>
+              <a
+                class="menu menu-item relative font-medium my-1 hover:bg-primary-color hover:text-white"
+              >
+                home
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="menu menu-item relative font-medium my-1 hover:bg-primary-color hover:text-white"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                class="menu menu-item relative font-medium my-1 hover:bg-primary-color hover:text-white"
+              >
+                Portfolio
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="menu menu-item relative font-medium my-1 hover:bg-primary-color hover:text-white"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="menu menu-item relative font-medium my-1 hover:bg-primary-color hover:text-white"
+              >
+                Contact
+              </a>
+            </li>
+            <input
+              type="text"
+              placeholder="Search"
+              class="border-b-2 py-1 mx-4 my-2 focus:outline-none focus:border-primary-color focus:text-primary-color"
+            />
+
+            <button
+              class="text-white bg-cyan-500 rounded-full py-1 px-2 hover:bg-primary-color hover:text-white hover:duration-100"
+            >
+              login
+            </button>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Section -->
+    <section
+      class="flex flex-col justify-center items-center bg-primary-color h-96 py-96"
+    >
+      <div class="home-container flex flex-col justify-center items-center">
+        <div class="home-txt flex flex-col justify-center items-center">
+          <h1 class="text-white font-bold text-2xl md:text-3xl mb-3">
+            Taste the Creativity
+          </h1>
+          <p class="text-gray-400 md:text-xl">
+            we make awesome graphic and web design
+          </p>
+        </div>
+        <div class="home-btn mt-8">
+          <button
+            class="bg-cyan-500 text-white rounded-full py-2 px-4 hover:bg-white hover:text-cyan-500 hover:duration-300 cursor-pointer"
+          >
+            Get Strarted
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- We are good at -->
+    <section class="flex flex-col justify-center items-center my-14">
+      <div class="flex flex-col justify-center items-center gap-5">
+        <div class="flex flex-col justify-center items-center gap-2">
+          <img src="Images/title.png" class="mb-8 cursor-pointer" />
+          <h1 class="font-bold text-2xl">We are good at</h1>
+          <p class="uppercase text-gray-400 taxt-sm">
+            Some of these stuff under
+          </p>
+          <hr class="w-32 h-1 bg-cyan-500 mt-4" />
+        </div>
+
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center xl:gap-36 lg:gap-12 xl:scale-100"
+        >
+          <div
+            class="relative cursor-pointer gap-5 w-[300px] h-[350px] flex flex-col items-center justify-end before:content-['1'] before:absolute before:font-nunito before:top-0 before:text-[200px] before:text-gray-200 before:-z-10 before:font-semibold before:-mt-6 before:mr-5 after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            <i class="fa-solid fa-pen text-cyan-500 text-5xl"></i>
+
+            <h1 class="uppercase text-yellow-color font-semibold">
+              graphic designer
+            </h1>
+            <p class="text-gray-400 flex flex-col text-center">
+              Place yourself in the doorway of great opportunities as we aim for
+              great success, connecting and collaborating with a focus on growth
+              and progress.
+            </p>
+          </div>
+          <div
+            class="relative cursor-pointer gap-5 w-[300px] h-[350px] flex flex-col items-center justify-end before:content-['2'] before:absolute before:font-nunito before:top-0 before:text-[200px] before:text-gray-200 before:-z-10 before:font-semibold before:-mt-6 before:mr-5 after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            <i class="fa-solid fa-desktop text-cyan-500 text-5xl"></i>
+            <h1 class="uppercase text-yellow-color font-semibold">
+              graphic designer
+            </h1>
+            <p class="text-gray-400 flex flex-col text-center">
+              Place yourself in the doorway of great opportunities as we aim for
+              great success, connecting and collaborating with a focus on growth
+              and progress.
+            </p>
+          </div>
+          <div
+            class="relative cursor-pointer gap-5 w-[300px] h-[350px] flex flex-col items-center justify-end before:content-['3'] before:absolute before:font-nunito before:top-0 before:text-[200px] before:text-gray-200 before:-z-10 before:font-semibold before:-mt-6 before:mr-5 after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            <i class="fa-solid fa-plug text-cyan-500 text-5xl"></i>
+
+            <h1 class="uppercase text-yellow-color font-semibold">
+              graphic designer
+            </h1>
+            <p class="text-gray-400 flex flex-col text-center">
+              Place yourself in the doorway of great opportunities as we aim for
+              great success, connecting and collaborating with a focus on growth
+              and progress.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- We make this -->
+    <section class="bg-secondary-color">
+      <div class="flex flex-col justify-center items-center gap-12 pb-20">
+        <div class="part1 flex flex-col justify-center items-center gap-2">
+          <img src="Images/title.png" class="mb-8 mt-6 cursor-pointer" />
+          <h1 class="font-bold text-2xl">We Make This</h1>
+          <p class="uppercase text-gray-400 taxt-sm">Prepare to be amazed</p>
+          <hr class="w-32 h-1 bg-cyan-500 my-4" />
+        </div>
+        <div
+          class="items flex flex-row justify-center items-center gap-10 font-semibold"
+        >
+          <p
+            class="rounded-full px-3 py-1 text-cyan-500 font-bold cursor-pointer"
+          >
+            All
+          </p>
+          <p
+            class="relative cursor-pointer font-medium after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            Design
+          </p>
+          <p
+            class="relative cursor-pointer font-medium after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            Code
+          </p>
+          <p
+            class="relative cursor-pointer font-medium after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            Photo
+          </p>
+          <p
+            class="relative cursor-pointer font-medium after:content-[''] after:bg-cyan-500 after:absolute after:h-[3px] after:w-[0%] after:left-0 after:-bottom-[5px] after:rounded-xl after:duration-300 hover:after:w-[100%]"
+          >
+            App
+          </p>
+        </div>
+        <div
+          class="imgs grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center gap-5 mb-10 mx-6"
+        >
+          <div class="overflow-auto">
+            <img
+              src="Images/work-01.jpg"
+              class="cursor-pointer transition ease-in-out hover:scale-90 duration-200 w-72 h-40 hover:shadow-xl"
+            />
+          </div>
+
+          <img
+            src="Images/work-02.jpg"
+            class="cursor-pointer transition ease-in-out hover:scale-90 duration-200 w-72 h-40 hover:shadow-xl"
+          />
+          <img
+            src="Images/work-03.jpg"
+            class="cursor-pointer transition ease-in-out hover:scale-90 duration-200 w-72 h-40 hover:shadow-xl"
+          />
+          <img
+            src="Images/work-04.jpg"
+            class="cursor-pointer transition ease-in-out hover:scale-90 duration-200 w-72 h-40 hover:shadow-xl"
+          />
+
+          <img
+            src="Images/work-05.jpg"
+            class="cursor-pointer transition ease-in-out hover:scale-90 duration-200 w-72 h-40 hover:shadow-xl"
+          />
+          <img
+            src="Images/work-06.jpg"
+            class="cursor-pointer transition ease-in-out hover:scale-90 duration-200 w-72 h-40 hover:shadow-xl"
+          />
+          <img
+            src="Images/work-07.jpg"
+            class="cursor-pointer transition ease-in-out hover:scale-90 duration-200 w-72 h-40 hover:shadow-xl"
+          />
+          <img
+            src="Images/work-08.jpg"
+            class="cursor-pointer transition ease-in-out hover:scale-90 duration-200 w-72 h-40 hover:shadow-xl"
+          />
+        </div>
+        <div class="flex items-center justify-center">
+          <button
+            class="bg-cyan-500 text-white rounded-full px-4 py-2 font-semibold hover:bg-secondary-color hover:text-cyan-500 hover:border hover:border-cyan-500 duration-200 cursor-pointer"
+          >
+            I Want More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Some Stuff About Us -->
+    <section
+      class="flex flex-col justify-center items-center mt-14 mx-8 xl:mx-40"
+    >
+      <div class="flex flex-col justify-center items-center gap-12">
+        <div class="part1 flex flex-col justify-center items-center gap-1">
+          <img src="Images/title.png" class="mb-8 mt-6 cursor-pointer" />
+          <h1 class="font-bold text-2xl">Some Stuff About Us</h1>
+          <p class="uppercase text-gray-400 taxt-sm">the great team</p>
+          <hr class="w-32 h-1 bg-cyan-500 my-6" />
+          <p class="text-gray-400 text-center">
+            Curabitur rutrum ligula ac malesuada. Sed blandit metus, a tincidunt
+            nibh pulvinar.Aenean nec urna in arcu porta dapibus. Proin ut tortor
+            risus. Donec sollicitudin molestie malesuada
+          </p>
+        </div>
+        <div
+          class="part2 flex flex-col lg:flex-row justify-around items-center mt-8"
+        >
+          <div class="txt text-center lg:text-start">
+            <h1 class="font-bold mb-3">Retina Design</h1>
+            <p class="text-gray-400">
+              Curabitur rutrum ligula ac malesuada. Sed blandit metus, a
+              tincidunt nibh pulvinar. Aenean nec urna in arcu porta dapibus.
+              Proin ut tortor risus. Donec sollicitudin molestie malesuada.
+            </p>
+            <br />
+            <p class="text-gray-400">
+              Curabitur rutrum ligula ac malesuada. Sed blandit metus, a
+              tincidunt nibh pulvinar. Aenean nec urna in arcu porta dapibus.
+              Proin ut tortor risus. Donec sollicitudin molestie malesuada.
+            </p>
+            <button
+              class="bg-cyan-500 text-white rounded-full py-1 px-4 my-8 cursor-pointer hover:bg-white hover:text-cyan-500 hover:border hover:border-cyan-500"
+            >
+              Order Me One
+            </button>
+          </div>
+
+          <div class="img">
+            <img src="Images/laptop.png" class="w-[80rem] mb-[-12px]" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet the team -->
+    <section class="bg-secondary-color">
+      <div class="container flex flex-col justify-around gap-16">
+        <div class="txt flex flex-col items-center gap-2 mt-24">
+          <h1 class="text-yellow-color font-bold text-2xl">Meet The Team</h1>
+          <p class="text-gray-500 text-center px-16 lg:px-72">
+            Curabitur rutrum ligula ac malesuada. Sed blandit metus, a tincidunt
+            nibh pulvinar. Aenean nec urna in arcu porta dapibus. Curabitur
+            rutrum ligula ac malesuada, Sed blandit metus.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-24 xl:mx-20 lg:mx-14"
+        >
+          <div
+            class="card flex flex-col items-center hover:border-2 border-cyan-500 hover:p-2 hover:rounded-none duration-200 cursor-pointer"
+          >
+            <img src="Images/team-1.png" class="w-full" />
+            <h1
+              class="bg-cyan-500 text-white py-3 w-full font-bold text-center"
+            >
+              Luckey Skywalker
+            </h1>
+            <p
+              class="bg-white text-gray-500 w-full py-4 px-1 text-center text-sm"
+            >
+              "I don't understand how we get by those troops. I thought we were
+              dead."
+            </p>
+          </div>
+          <div
+            class="card flex flex-col items-center hover:border-2 border-cyan-500 hover:p-2 hover:rounded-none duration-200 cursor-pointer"
+          >
+            <img src="Images/team-2.png" class="w-full" />
+            <h1
+              class="bg-cyan-500 text-white py-3 w-full font-bold text-center"
+            >
+              Luckey Skywalker
+            </h1>
+            <p
+              class="bg-white text-gray-500 w-full py-4 px-1 text-center text-sm"
+            >
+              "I don't understand how we get by those troops. I thought we were
+              dead."
+            </p>
+          </div>
+          <div
+            class="card flex flex-col items-center hover:border-2 border-cyan-500 hover:p-2 hover:rounded-none duration-200 cursor-pointer"
+          >
+            <img src="Images/team-3.png" class="w-full" />
+            <h1
+              class="bg-cyan-500 text-white py-3 w-full font-bold text-center"
+            >
+              Luckey Skywalker
+            </h1>
+            <p
+              class="bg-white text-gray-500 w-full py-4 px-1 text-center text-sm"
+            >
+              "I don't understand how we get by those troops. I thought we were
+              dead."
+            </p>
+          </div>
+          <div
+            class="card flex flex-col items-center hover:border-2 border-cyan-500 hover:p-2 hover:rounded-none duration-200 cursor-pointer"
+          >
+            <img src="Images/team-4.png" class="w-full" />
+            <h1
+              class="bg-cyan-500 text-white py-3 w-full font-bold text-center"
+            >
+              Luckey Skywalker
+            </h1>
+            <p
+              class="bg-white text-gray-500 w-full py-4 px-1 text-center text-sm"
+            >
+              "I don't understand how we get by those troops. I thought we were
+              dead."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech -->
+    <section
+      class="Techs flex row justify-center lg:justify-around mx-16 my-12 items-center"
+    >
+      <div
+        class="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-center gap-10 lg:gap-12 items-center"
+      >
+        <img src="Images/tech-1.png" class="cursor-pointer" />
+        <img src="Images/tech-2.png" class="cursor-pointer" />
+        <img src="Images/tech-3.png" class="cursor-pointer" />
+        <img src="Images/tech-4.png" class="cursor-pointer" />
+        <img src="Images/tech-1.png" class="cursor-pointer" />
+        <img src="Images/tech-2.png" class="cursor-pointer" />
+      </div>
+    </section>
+
+    <!-- Start Your Project Now -->
+    <section>
+      <div
+        class="bg-primary-color flex flex-col justify-center items-center py-14"
+      >
+        <div class="txt flex flex-col justify-center items-center mx-6">
+          <h1 class="text-white font-bold text-2xl text-center">
+            Start Your Project Now
+          </h1>
+          <p class="text-gray-400 text-center">
+            Leave your description and we start the engin. Don't worry, you can
+            cancle anytime.
+          </p>
+        </div>
+        <div class="">
+          <button
+            class="bg-white text-cyan-500 cursor-pointer rounded-full py-1 px-4 my-8 hover:bg-cyan-500 hover:text-white duration-200"
+          >
+            Start Project
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Read Our Blog -->
+    <section>
+      <div class="all flex flex-col items-center my-20 xl:mx-40 mx-12">
+        <div class="part1 flex flex-col justify-center items-center gap-1">
+          <img src="Images/title.png" class="mb-8 mt-6 cursor-pointer" />
+          <h1 class="font-bold text-2xl">Read Our Blogs</h1>
+          <p class="uppercase text-gray-400 taxt-sm">new stories</p>
+          <hr class="w-32 h-1 bg-cyan-500 my-6" />
+        </div>
+
+        <div
+          class="cards flex flex-col lg:flex-row justify-around gap-20 my-10"
+        >
+          <div
+            class="border rounded-lg flex flex-col items-start gap-1 hover:border hover:border-cyan-500 hover:p-2 duration-200 cursor-pointer"
+          >
+            <img src="Images/blog-1.jpg" class="rounded-tl-lg rounded-tr-lg" />
+            <p class="text-gray-400 ml-3">Jan 17, 2022</p>
+            <h1 class="ml-3 mb-2">Some Awsome Blog Title Here</h1>
+          </div>
+
+          <div
+            class="border rounded-lg flex flex-col items-start gap-1 hover:border hover:border-cyan-500 hover:p-2 duration-200 cursor-pointer"
+          >
+            <img src="Images/blog-2.jpg" class="rounded-tl-lg rounded-tr-lg" />
+            <p class="text-gray-400 ml-3">Jan 17, 2022</p>
+            <h1 class="ml-3 mb-2">Some Awsome Blog Title Here</h1>
+          </div>
+
+          <div
+            class="border rounded-lg flex flex-col items-start gap-1 hover:border hover:border-cyan-500 hover:p-2 duration-200 cursor-pointer"
+          >
+            <img src="Images/blog-3.jpg" class="rounded-tl-lg rounded-tr-lg" />
+            <p class="text-gray-400 ml-3">Jan 17, 2022</p>
+            <h1 class="ml-3 mb-2">Some Awsome Blog Title Here</h1>
+          </div>
+        </div>
+
+        <div class="">
+          <button
+            class="bg-cyan-500 text-white hover:border hover:border-cyan-500 hover:bg-white hover:text-cyan-500 cursor-pointer rounded-full py-1 px-4 my-8 text-center"
+          >
+            More Stories
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <div class="bg-yellow-color flex flex-col py-14">
+        <div
+          class="flex flex-col lg:flex-row justify-center gap-10 lg:gap-20 lg:mx-32 mx-8"
+        >
+          <h1 class="text-xl font-bold">Subscribe to our Newsletter:</h1>
+          <input
+            type="text"
+            placeholder="Enter Email Address"
+            class="w-1/2 bg-transparent custom-placeholder border-b-2 border-primary-color focus:outline-none pb-4 placeholder:text-primary-color"
+          />
+          <button
+            class="bg-primary-color text-yellow-color rounded-full py-1 px-4 cursor-pointer hover:bg-yellow-color hover:text-primary-color hover:border hover:border-primary-color duration-200"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-color">
+      <div
+        class="flex flex-col lg:flex-row justify-center lg:justify-center items-start lg:gap-10 px-6 mx-8 xl:mx-44 lg:scale-90"
+      >
+        <div class="row1 flex flex-col gap-6 text-gray-400 my-16 lg:w-2/6">
+          <div class="col1">
+            <img src="Images/logo.png" class="mb-3 cursor-pointer" />
+            <p>
+              Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
+              lacinia eget consectetur sed, convallis at tellus.
+            </p>
+          </div>
+          <div class="col2">
+            <p>
+              Created By
+              <span class="text-cyan-500 font-semibold my-16 cursor-pointer"
+                >Graphberry</span
+              >
+            </p>
+            <p>
+              @ 2022 -
+              <span class="text-yellow-color font-semibold my-16 cursor-pointer"
+                >Bondi Inc</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="row2 flex flex-row lg:justify-around gap-14 md:gap-64 lg:gap-5 lg:w-2/6"
+        >
+          <div class="row2 text-gray-400 my-16">
+            <h1 class="text-white font-semibold">Links</h1>
+            <p class="cursor-pointer">Home</p>
+            <p class="cursor-pointer">Our Services</p>
+            <p class="cursor-pointer">Portfolio</p>
+            <p class="cursor-pointer">Testimonials</p>
+            <p class="cursor-pointer">Support</p>
+            <p class="cursor-pointer">Terms and Condition</p>
+          </div>
+
+          <div class="row2 text-gray-400 my-16">
+            <h1 class="text-white font-semibold">About Us</h1>
+            <p class="cursor-pointer">Sign In</p>
+            <p class="cursor-pointer">Register</p>
+            <p class="cursor-pointer">About Us</p>
+            <p class="cursor-pointer">Blog</p>
+            <p class="cursor-pointer">Contact Us</p>
+          </div>
+        </div>
+
+        <div class="row3 flex flex-col my-16 lg:w-2/6">
+          <div class="col1 flex flex-col">
+            <h1 class="text-white font-semibold">Contact Us</h1>
+            <p class="text-gray-400">
+              Get in touch with us via mail phone.We are waiting for your call
+              or message
+            </p>
+          </div>
+          <div class="">
+            <button
+              class="bg-white text-cyan-500 rounded-full py-1 px-4 my-8 text-center hover:bg-cyan-500 hover:text-white cursor-pointer duration-200"
+            >
+              graphberry@gmail.com
+            </button>
+          </div>
+          <div class="icons flex flex-row gap-3">
+            <i
+              class="fa-brands fa-facebook text-white bg-blue-700 rounded-full p-2 cursor-pointer hover:bg-blue-600"
+            ></i>
+            <i
+              class="fa-brands fa-x-twitter text-white bg-gray-700 rounded-full p-2 cursor-pointer hover:bg-gray-600"
+            ></i>
+            <i
+              class="fa-brands fa-linkedin text-white bg-blue-600 rounded-full p-2 cursor-pointer hover:bg-blue-500"
+            ></i>
+            <i
+              class="fa-brands fa-youtube text-white bg-red-600 rounded-full p-2 cursor-pointer hover:bg-red-500"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
